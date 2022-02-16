@@ -11,12 +11,12 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
-const Pokemon = props => {
+const Pokemon = (props) => {
   const [modal, setModal] = useState(false);
   const [wichlist, setWichlist] = useState(false);
 
-  const { data, wichlistPokemon } = props;
-  const { id, sprites, name, base_experience } = data;
+  const { poke, wichlistPokemon } = props;
+  const { id, sprites, name, base_experience } = poke;
     
   const handleCloseModal = () => {
     setModal(false);
@@ -26,13 +26,13 @@ const Pokemon = props => {
     setModal(true);
   };
   const handleSetWichList = () => {
-    props.setWichlist({ data });
+    props.setWichlist({ poke });
     setWichlist(true);
   };
-
+ 
    const isFavorite = () => {
     const result = wichlistPokemon.filter(
-      (wichlistPokemon) => wichlistPokemon.data.id === id
+      (wichlistPokemon) => wichlistPokemon.poke.id === id
     );
     if (result.lenth) {
       setWichlist(true);
@@ -40,17 +40,16 @@ const Pokemon = props => {
   }; 
 
   useEffect(() => {
+    console.log({props});
      isFavorite(); 
   }, []);
-  console.log("data",data);
+  console.log("data",poke);
+
+
   return (
-    <Container fluid="md">
-  <Row>
-    <Col>
-        <h2>{name}</h2>
-    </Col>
-  </Row>
-</Container>
+  <div>
+    <p>{name}</p>
+  </div>
 
   );
 };

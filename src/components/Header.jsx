@@ -10,7 +10,7 @@ const Header = () => {
   const sectionActive = useSelector(state => state.sectionActive);
   const dispatch = useDispatch();
 
-  const handleSetSections = section => {
+  const handleSetSections = (section) => {
     dispatch(setSection(section));
   };
 

@@ -6,23 +6,8 @@ import Loader from "./Loader";
 
 
 const PokemonList = () => {
-
-    
-
-    const [pokemonurl, setPokemonUrl] = useState([]);
-    //const [pokemon, setPokemon] = useState([]);
-    const [prueba, setPrueba] = useState([]);
-    const [doneFetch, setDoneFetch] = useState(true)
-    const [pokemons, setPokemons] = useState([]);
-
-
-
     const [result, setResult] = useState([]);
     const [poke, setPoke] = useState([]);
-
-
-
-
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(false);
 
@@ -50,9 +35,9 @@ const PokemonList = () => {
          
         ))
        
-        .catch((err)=>console.log(err),
+         .catch((err)=>console.log(err),
         setLoading(false),
-        setError(true));
+       ); 
 
     };
 
@@ -66,13 +51,11 @@ const PokemonList = () => {
             <Error/>
         ) : (
             poke.map((pokemon)=>(
-                <Pokemon key={pokemon.id}  data={pokemon} />
+                <Pokemon key={pokemon.id}  poke={pokemon} />
             ))
-        )
-
-        }
+        )}
     </div>
-  )
-}
+  );
+};
 
 export default PokemonList;
