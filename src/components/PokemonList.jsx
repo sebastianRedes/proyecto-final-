@@ -37,6 +37,7 @@ const PokemonList = () => {
        
          .catch((err)=>console.log(err),
         setLoading(false),
+        setError(true)
        ); 
 
     };

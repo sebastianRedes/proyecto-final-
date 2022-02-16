@@ -11,8 +11,8 @@ import reducer from "./reducers";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const initialState ={
-  wichlistPokemon: [],
-  sectionActive: "Pokemon",
+  wichlistPokemons: [],
+  sectionActive: "Pokemons",
 }
 
 //const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;

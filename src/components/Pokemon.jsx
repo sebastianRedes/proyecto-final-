@@ -15,7 +15,7 @@ const Pokemon = (props) => {
   const [modal, setModal] = useState(false);
   const [wichlist, setWichlist] = useState(false);
 
-  const { poke, wichlistPokemon } = props;
+  const { poke, wichlistPokemons } = props;
   const { id, sprites, name, base_experience } = poke;
     
   const handleCloseModal = () => {
@@ -30,14 +30,14 @@ const Pokemon = (props) => {
     setWichlist(true);
   };
  
-   const isFavorite = () => {
-    const result = wichlistPokemon.filter(
+    const isFavorite = () => {
+    const result = wichlistPokemons.filter(
       (wichlistPokemon) => wichlistPokemon.poke.id === id
     );
     if (result.lenth) {
       setWichlist(true);
     }
-  }; 
+  };  
 
   useEffect(() => {
     console.log({props});
