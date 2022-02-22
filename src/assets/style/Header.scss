@@ -1,0 +1,27 @@
+.logo-imagen{
+    width: 300px;
+    height: auto;
+}
+
+.header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.header__nav__options{
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+ 
+  
+}
+
+.header_nav_item{
+    margin-right: 25px;
+    font-size: 25px;
+    list-style-type: none;
+    text-decoration: none;
+}

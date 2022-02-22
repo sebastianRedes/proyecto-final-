@@ -3,7 +3,7 @@ import Logo from "../assets/img/logo.png";
 import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { setSection } from "../actions";
-
+import "../assets/style/Header.scss"
 
 const Header = () => {
   const sectionActive = useSelector(state => state.sectionActive);
@@ -14,10 +14,10 @@ const Header = () => {
   };
 
   return (
-    <header className="">
+    <header className="header">
     <figure className="">
       <img
-        className=""
+        className="logo-imagen"
         src={Logo}
         alt="o"
       />
@@ -26,13 +26,13 @@ const Header = () => {
       <ul className="header__nav__options">
         <li
           onClick={()=>handleSetSections("Pokemon")}
-          className={`${sectionActive==="Pokemons" ?"active":""}`}
+          className={`header_nav_item${sectionActive==="Pokemons" ?"active":""}`}
         >
           <Link to="/">Pokemons</Link>
         </li>
         <li
           onClick={()=>handleSetSections("WichList")}
-          className={`${sectionActive==="WichList" ?"active":""}`}
+          className={`header_nav_item${sectionActive==="WichList" ?"active":""}`}
         >
           <Link to="/pokemonwichlist">WichList</Link>
         </li>

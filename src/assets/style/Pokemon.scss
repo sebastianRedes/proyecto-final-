@@ -1,0 +1,43 @@
+.pokemon{
+    width: 300px;
+    margin: 25px;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.pokemon_img{
+    width: 300px;
+    height: 300px;
+}
+
+.pokemon_title{
+    text-align:center;
+}
+
+.pokemon_details-start{
+    cursor: pointer;
+    width: 25px;
+    height: 25x;
+   position: absolute;
+    top: 20px;
+    left: 245px;
+}
+
+.pokemon_details-start.wichlist{
+   
+    fill: #ffffff;
+}
+
+
+.pokemon_details-start.wichlist:hover{
+    
+    fill: red;
+}
+.pokemon_details-start.noWichlist{
+    fill: #ffffff;
+}
+
+.pokemon_details-start.noWichlist:hover{
+    fill: red;
+    
+   } 

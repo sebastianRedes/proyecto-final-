@@ -3,7 +3,7 @@ import axios from "axios";
 import Pokemon from "./Pokemon";
 import Error from "./Error";
 import Loader from "./Loader";
-
+import "../assets/style/PokemonList.scss"
 
 const PokemonList = () => {
     const [result, setResult] = useState([]);
@@ -21,7 +21,7 @@ const PokemonList = () => {
     },[]);
 
     const getPoke=()=>{
-        fetch('https://pokeapi.co/api/v2/pokemon/?limit=50')
+        fetch('https://pokeapi.co/api/v2/pokemon/?limit=20')
         .then((response) => response.json())
         .then((data) => setResult(
           data.results.map((item) => {

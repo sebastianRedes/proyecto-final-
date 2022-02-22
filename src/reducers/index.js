@@ -11,7 +11,7 @@ const reducer =(state, action)=>{
     return{
         ...state,
         wichlistPokemon: state.wichlistPokemon.filter(
-            (items) =>items.data.id != action.payload,
+            (items) =>items.data.id !== action.payload,
         ),
     };
 
